@@ -96,14 +96,40 @@ export const projects = [
   {
     id: 1,
     title: "IoT Smart Home with Real-Time Mobile App Control",
-    desc: "Minim in nisi ullamco ullamco magna voluptate aute laboris consectetur nulla. Aute in labore nisi culpa officia eu dolore enim exercitation qui voluptate est et esse. Fugiat magna voluptate nisi deserunt est fugiat esse dolor mollit officia.",
+    desc: `<p>Arduino-Based Smart Home System Using NodeMCU and a Mobile Application Integrated with Google Firebase</p>
+            <br />
+            <p>
+              This project was developed as part of my final semester thesis. The system is designed to provide remote monitoring and control of home electronic devices using an internet-connected platform. The components used in this
+              project include:
+            </p>
+            <br />
+            <ol class="list-decimal list-inside">
+              <li>NodeMCU (ESP8266)</li>
+              <li>DHT11 Temperature and Humidity Sensor</li>
+              <li>Relay Module</li>
+              <li>Servo Motor</li>
+              <li>Resistors</li>
+              <li>LEDs</li>
+              <li>Fuse</li>
+              <li>Small Light Bulb</li>
+              <li>Cooling Fan</li>
+              <li>Various connecting wires</li>
+              <li>A custom-built mobile application developed using Kodular</li>
+            </ol>
+            <br />
+            <p>The main purpose of this system is to assist homeowners when they are away, such as traveling out of town, and are unable to manually control the lighting or electronic appliances at home.</p>
+            <p>
+              <br />
+              This smart home system allows users to remotely control and monitor household electronic devices via an internet connection. With real-time communication powered by Google Firebase, homeowners can manage their home appliances
+              from anywhere, without needing to return home or rely on neighbors for help.
+            </p>`,
     image: assetsImg.img_p1,
     githubLink: "https://github.com/hasbirizaldi/Iot-smart-home-skripsi",
   },
   {
     id: 2,
     title: "Al Quran Web App",
-    desc: "Aliquip aliqua dolore culpa commodo cupidatat est eu irure. Cillum dolore anim laborum mollit aliquip sint sint velit sunt adipisicing dolor dolor cupidatat officia. Laboris ullamco aute dolor officia nulla labore deserunt anim ad et laborum ullamco. Velit ex commodo irure cillum in magna ullamco non ex. Labore id id nisi eu aliquip eiusmod. Ea ullamco ex commodo ea quis.",
+    desc: `<p>This Qur'an application is developed using <strong>React.js</strong> and retrieves its data from the <a href='https://alquran.cloud/api' target='_blank'>AlQuran Cloud API</a>.</p><br /><p><strong>Available Features:</strong></p><ol class='list-decimal list-inside'><li>List of Surahs</li><li>Indonesian Translation</li><li>Audio playback for each verse</li><li>Auto-play to the next verse after the current one finishes</li><li>Full audio controls</li><li>Fully responsive for mobile devices</li></ol><br /><p><em>This app is still under active development.</em></p>`,
     image: assetsImg.img_p2,
     liveDemo: "https://alquran-ku-theta.vercel.app/",
     githubLink: "https://github.com/hasbirizaldi/alquran-ku/tree/main",
@@ -111,7 +137,7 @@ export const projects = [
   {
     id: 3,
     title: "Wedding Invitation",
-    desc: "Cillum irure voluptate ea veniam tempor velit do elit veniam proident anim cupidatat. Proident et fugiat sunt ad adipisicing voluptate exercitation ea magna magna consequat tempor. Non ipsum amet dolore exercitation. Adipisicing consectetur sint ea sunt proident aliqua dolore mollit aute magna.",
+    desc: `<p>This is a digital wedding invitation web application developed using <strong>React.js</strong>. The app is designed to provide a modern, elegant, and responsive invitation experience that can be accessed via mobile or desktop.</p><br /><p><strong>Key Features:</strong></p><ol class='list-decimal list-inside'><li>Countdown timer to the wedding date</li><li>Guest name personalization based on URL parameters</li><li>Formal invitation message display</li><li>Mobile-first design with responsive layout</li><li>One-click access to the invitation page</li><li>Hosted on Netlify for easy sharing</li></ol><br /><p><em>This application is still under improvement and can be customized further to suit different wedding themes and needs.</em></p>`,
     image: assetsImg.img_p3,
     liveDemo: "https://undangan-ppernikahan.netlify.app/?p=Nini&nama=Plinti",
     githubLink: "https://github.com/hasbirizaldi",
@@ -119,15 +145,15 @@ export const projects = [
   {
     id: 4,
     title: "Contact Management",
-    desc: "Nisi sit consequat quis eu veniam commodo est. Exercitation et mollit non velit sunt aliqua occaecat sit labore aliqua do aliquip proident irure. Amet adipisicing ullamco et magna nulla commodo aliqua ullamco pariatur duis irure pariatur exercitation proident. Voluptate consequat labore excepteur consequat anim irure officia.",
+    desc: `<p>This is a full-stack contact management application developed using <strong>React.js</strong> for the frontend and <strong>Laravel</strong> for the backend API. It allows users to store, search, update, and delete contact information efficiently with a modern and responsive interface.</p><br /><p><strong>Key Features:</strong></p><ol class='list-decimal list-inside'><li>Add new contacts with name, email, and phone number</li><li>Search contacts by name, email, or phone</li><li>Edit and delete existing contacts</li><li>Real-time form validation and feedback</li><li>Authentication & user session control</li><li>Mobile-responsive design</li><li>Clean and intuitive user interface</li></ol><br /><p>The backend API is built with <strong>Laravel</strong> and serves as a secure RESTful service for managing contact data. The frontend is fully powered by <strong>React.js</strong>, enabling smooth user interactions and dynamic updates without full page reloads.</p>`,
     image: assetsImg.img_p4,
     githubLink: "https://github.com/hasbirizaldi/management-contacts",
     liveDemo: "https://brewokode.site/",
   },
   {
     id: 5,
-    title: "Web Portal Berita (Pawarta)",
-    desc: "Cillum non amet deserunt et sint cupidatat id quis. Esse culpa laboris culpa commodo mollit ut mollit mollit consequat amet irure minim ipsum enim. Ex sunt irure elit est eiusmod mollit veniam est ipsum aliquip magna magna. Ut fugiat ipsum sint et commodo irure ut irure.",
+    title: "Web Portal Berita (Pawarta News)",
+    desc: `<p><strong>Pawarta</strong> is a dynamic and fully responsive news portal developed using <strong>WordPress</strong>. This project showcases the capability of WordPress as a content management system (CMS) to build professional news websites with modern layout, categorized content, and editorial tools.</p><br /><p><strong>Key Features:</strong></p><ol class='list-decimal list-inside'><li>Homepage with featured, latest, and trending news</li><li>Categorized sections: National, Politics, Sports, Entertainment, etc.</li><li>Article pages with thumbnail, author info, publish date, and tags</li><li>Admin panel for posting, editing, and managing content</li><li>SEO-optimized structure</li><li>Responsive design for desktop and mobile</li><li>Widget-ready sidebar and footer</li></ol><br /><p>This project is ideal for online publishers, local news sites, or blog networks that need an easy-to-manage yet powerful platform.</p>`,
     image: assetsImg.img_p5,
     githubLink: "https://github.com/hasbirizaldi",
     liveDemo: "",
@@ -135,7 +161,7 @@ export const projects = [
   {
     id: 6,
     title: "Klinik App",
-    desc: "Occaecat sunt dolor proident in non cupidatat proident. Anim amet quis officia magna consequat velit et ex do laborum nostrud fugiat. Amet ex laboris ullamco fugiat. Elit duis magna laboris aliqua consequat culpa id reprehenderit cupidatat fugiat non.",
+    desc: `<p>This project is a travel booking web application interface built with <strong>Laravel</strong> as the backend framework and <strong>Blade</strong> as the templating engine. It provides a responsive and modern design for travel-related services such as hotel reservations, flights, trains, buses, and more.</p><br /><p><strong>Key Features:</strong></p><ol class='list-decimal list-inside'><li>Built with <strong>Laravel 10+</strong> for secure and scalable backend</li><li>Uses <strong>Blade templating engine</strong> for dynamic frontend rendering</li><li>Modular structure for booking types (Hotel, Flight, Train, etc.)</li><li>Mobile-first UI layout</li><li>Navigation tabs for Home, Search, Activity, and Settings</li><li>Ready for integration with APIs (e.g., hotel/flight providers)</li></ol><br /><p>This project demonstrates how Laravel and Blade can be used to build a clean, organized, and mobile-friendly booking interface.</p>`,
     image: assetsImg.img_p6,
     githubLink: "https://github.com/hasbirizaldi",
     liveDemo: "",

@@ -6,9 +6,9 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 const Home = () => {
   return (
-    <section id="home" className="min-h-[90vh] bg-[#faf1e6] dark:bg-slate-900 flex flex-col justify-between duration-500">
+    <section id="home" className="min-h-[90vh] bg-[#faf1e6] dark:bg-slate-900 flex flex-col justify-between duration-500 ">
       <div className="grid lg:grid-cols-2 grid-cols-1 pt-20">
-        <div className="flex justify-center  ">
+        <div className="flex justify-center" data-aos="fade-up">
           <div className=" lg:w-[70%] w-[100%]  flex flex-col justify-center gap-6 ">
             <h1 className="text-[#ac6b34] dark:text-cyan-300 font-semibold text-xl lg:text-left text-center">Hey, I'm Hasbi Rizaldi</h1>
             <h2 className="lg:text-6xl text-4xl art font-bold text-slate-900 dark:text-white lg:text-left text-center">I Build & Design Web Interfices.</h2>
@@ -20,7 +20,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="lg:flex hidden justify-center items-center ">
+        <div className="lg:flex hidden justify-center items-center" data-aos="zoom-in">
           <img src={assetsImg.img_profile} alt="profile image" className="w-[400px] rounded-full shadow-ku" />
         </div>
       </div>

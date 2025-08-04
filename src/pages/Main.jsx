@@ -4,7 +4,10 @@ import About from "../components/About";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
+import Footer from "../layouts/Footer";
 import { FaArrowCircleUp } from "react-icons/fa";
+import Navbar from "../layouts/Navbar";
+import { ToastContainer } from "react-toastify";
 const Main = () => {
   const [visible, setVisible] = useState(false);
 
@@ -26,13 +29,17 @@ const Main = () => {
 
   return (
     <div className="mt-14 relative">
+      <ToastContainer />
+      <Navbar />
       <Home />
       <About />
       <Skills />
       <Projects />
       <Contact />
+      <Footer />
+
       {visible && (
-        <div onClick={scrollToTop} className="fixed right-4 lg:bottom-14 bottom-5 cursor-pointer hover:brightness-125 transition-all duration-500 ease-in-out z-50">
+        <div onClick={scrollToTop} className="fixed right-4 lg:bottom-14 bottom-5 cursor-pointer hover:brightness-125 transition-all duration-500 ease-in-out z-50 bg-white  rounded-full" data-aos="fade-up">
           <FaArrowCircleUp className="lg:text-[40px] text-[36px] text-[#ac6b34] dark:text-cyan-500" />
         </div>
       )}

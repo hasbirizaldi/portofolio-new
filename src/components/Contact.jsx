@@ -1,7 +1,7 @@
 import { IoSend } from "react-icons/io5";
 import { assetsImg } from "../assets/img/assets";
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 
@@ -12,12 +12,12 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_ky7sx8d", "template_prybchn", form.current, {
-        publicKey: "D_X0CeD9ykT927ySE",
+      .sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_KEY, form.current, {
+        publicKey: import.meta.env.VITE_PUBLIC_KEY,
       })
       .then(
         () => {
-          toast.success("Pesan berhasil dikirim!", {
+          toast.success("Message sent successfully.", {
             position: "top-right",
             autoClose: 3000,
           });
@@ -25,7 +25,7 @@ const Contact = () => {
           form.current.reset();
         },
         (error) => {
-          toast.error("Gagal mengirim pesan. Coba lagi nanti.", {
+          toast.error("Failed to send message. Please try again later. ", {
             position: "top-right",
             autoClose: 3000,
           });
@@ -35,11 +35,13 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="min-h-[90vh] bg-[#fdfaf6] dark:bg-slate-950 py-10 lg:px-44 px-4 duration-500 ">
-      <h1 className="text-3xl font-bold text-slate-600 dark:text-slate-200 mb-2 text-center">Contact Me</h1>
+    <section id="contact" className="min-h-[90vh] bg-[#fdfaf6] dark:bg-slate-950 lg:py-10 py-20 lg:px-44 px-4 duration-500 ">
+      <h1 className="text-3xl font-bold text-slate-600 dark:text-slate-200 mb-2 text-center" data-aos="fade-up">
+        Contact Me
+      </h1>
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mt-24">
         <div className="flex flex-col gap-9">
-          <div className="flex flex-row lg:gap-8 gap-10">
+          <div className="flex flex-row lg:gap-8 gap-10" data-aos="zoom-in">
             <img src={assetsImg.img_gmail} alt="Gmail" className="h-20 w-20" />
             <div className="flex flex-col gap-1">
               <h3 className="font-semibold text-slate-700 dark:text-slate-300 text-lg">Have a question?</h3>
@@ -52,7 +54,7 @@ const Contact = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-row gap-8">
+          <div className="flex flex-row gap-8" data-aos="zoom-in">
             <img src={assetsImg.img_map} alt="Gmail" className="w-20" />
             <div className="flex flex-col gap-1">
               <h3 className="font-semibold text-slate-700 dark:text-slate-300 text-lg">Current Location</h3>
@@ -60,30 +62,30 @@ const Contact = () => {
               <p className="text-[#ac6b34] dark:text-cyan-500 font-semibold">Serving Client Worldwide</p>
             </div>
           </div>
-          <div className="">
+          <div>
             <h1 className="text-lg text-slate-700 font-semibold my-3 dark:text-slate-300 lg:text-start text-center">Contact Me on Social Media</h1>
             <div className="flex gap-8 lg:justify-start justify-center">
-              <a href="https://www.linkedin.com/in/hasbi-rizaldi-a9393a260" target="_blank">
+              <a href="https://www.linkedin.com/in/hasbi-rizaldi-a9393a260" target="_blank" data-aos="flip-right" data-aos-duration="2000">
                 <FaLinkedin className=" text-4xl lg:text-5xl hover:scale-105 transition-all ease-in-out hover:brightness-125 text-blue-900 dark:text-blue-600" />
               </a>
-              <a href="https://github.com/hasbirizaldi" target="_blank">
+              <a href="https://github.com/hasbirizaldi" target="_blank" data-aos="flip-right" data-aos-duration="2000">
                 <FaGithub className=" text-4xl lg:text-5xl hover:scale-105 transition-all ease-in-out hover:brightness-125 text-slate-800 dark:text-slate-300" />
               </a>
-              <a href="https://api.whatsapp.com/send?phone=6285640402997&text=Assalamualaikum" target="_blank">
+              <a href="https://api.whatsapp.com/send?phone=6285640402997&text=Assalamualaikum" target="_blank" data-aos="flip-right" data-aos-duration="2000">
                 <FaWhatsapp className=" text-4xl lg:text-5xl hover:scale-105 transition-all ease-in-out hover:brightness-125 text-green-700 dark:text-green-400" />
               </a>
-              <a href="https://facebook.com/hasbi.riz" target="_blank">
+              <a href="https://facebook.com/hasbi.riz" target="_blank" data-aos="flip-right" data-aos-duration="2000">
                 <FaFacebook className=" text-4xl lg:text-5xl hover:scale-105 transition-all ease-in-out hover:brightness-125 text-blue-700 " />
               </a>
-              <a href="https://instagram.com/hasbi.rizaldi" target="_blank">
+              <a href="https://instagram.com/hasbi.rizaldi" target="_blank" data-aos="flip-right" data-aos-duration="2000">
                 <FaInstagram className=" text-4xl lg:text-5xl hover:scale-105 transition-all ease-in-out hover:brightness-125 text-pink-600" />
               </a>
             </div>
           </div>
         </div>
         <form ref={form} onSubmit={handleSubmit}>
-          <div className="flex flex-col">
-            <div className="grid grid-cols-2 gap-4 mb-8">
+          <div className="flex flex-col" data-aos="fade-up">
+            <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 mb-8">
               <input
                 type="text"
                 name="user_name"
@@ -110,7 +112,6 @@ const Contact = () => {
             <button type="submit" className="w-46 flex items-center gap-2 justify-center bg-[#ac6b34] dark:bg-cyan-700 text-white py-1.5 rounded cursor-pointer shadow-btn hover:brightness-125 mt-9 text-lg font-semibold">
               Send Message <IoSend />
             </button>
-            <ToastContainer />
           </div>
         </form>
       </div>

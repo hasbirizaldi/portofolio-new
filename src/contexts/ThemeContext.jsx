@@ -6,16 +6,21 @@ export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
 
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
+    const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
+  };
+
+  const value = {
+    theme,
+    toggleTheme,
   };
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
   }, [theme]);
 
-  return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>;
+  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 };
 
 export const useTheme = () => useContext(ThemeContext);
