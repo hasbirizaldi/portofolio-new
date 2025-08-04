@@ -3,11 +3,17 @@ import { MdWbSunny } from "react-icons/md";
 import { BsMoonStarsFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import { useTheme } from "../contexts/ThemeContext";
+import { RiMenu2Fill } from "react-icons/ri";
+import { IoIosCloseCircle } from "react-icons/io";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const [openMenu, setOpenMenu] = useState(false);
 
+  const toggleMenu = () => {
+    setOpenMenu((prev) => !prev);
+  };
   useEffect(() => {
     const toggleVisible = () => {
       setVisible(window.scrollY > 200);
@@ -36,8 +42,30 @@ const Navbar = () => {
             ))}
           </ul>
           {/* Theme toggle */}
-          <div onClick={toggleTheme} className="cursor-pointer ml-36">
+          <div onClick={toggleTheme} className="cursor-pointer absolute right-24 lg:hidden block">
             {theme === "dark" ? <BsMoonStarsFill className="text-amber-400 text-xl" /> : <MdWbSunny className="text-amber-400 text-3xl" />}
+          </div>
+          {/* Mobile humbarger nenu */}
+          <div className="lg:hidden absolute right-4" onClick={toggleMenu}>
+            <RiMenu2Fill className="text-4xl" />
+          </div>
+          {/* Mobile menu */}
+          <div
+            className={`lg:hidden fixed top-0 left-0 w-full h-[70vh] bg-slate-950 border-b-2 border-blue-200 p-4 z-50 transition-all duration-500 ease-out
+    ${openMenu ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-full pointer-events-none"}`}
+          >
+            <IoIosCloseCircle className="absolute text-4xl  right-3 dark:text-cyan-100 text-slate-300" onClick={toggleMenu} />
+            <nav className="border-2 border-blue-200 mt-14 rounded-lg py-20">
+              <ul className="flex flex-col justify-center items-center gap-12">
+                {["home", "about", "projects", "contact"].map((id) => (
+                  <li key={id}>
+                    <a href={`#${id}`} onClick={toggleMenu} className="text-[#00a5a3] dark:text-cyan-200 hover:text-[#ac6b34]  capitalize text-xl font-semibold">
+                      {id}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
         </div>
       </div>

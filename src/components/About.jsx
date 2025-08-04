@@ -14,7 +14,7 @@ const About = () => {
     setSlide(false);
   };
   return (
-    <section id="about" className="min-h-[90vh] bg-[#fdfaf6] dark:bg-slate-900 duration-500 flex flex-row pt-20">
+    <section id="about" className="min-h-[110vh] bg-[#fdfaf6] dark:bg-slate-900 duration-500 flex flex-row pt-20">
       <div className="w-[40%] lg:flex hidden justify-end ">
         <img src={assetsImg.img_profile} alt="profile image" className="w-[500px] h-[500px] rounded-3xl shadow-ku mt-6" />
       </div>
