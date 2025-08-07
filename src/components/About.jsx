@@ -16,7 +16,7 @@ const About = () => {
   return (
     <section id="about" className="min-h-[110vh] lg:min-h-[100vh] bg-[#fdfaf6] dark:bg-slate-900 duration-500 flex flex-row pt-20 ">
       <div className="w-[40%] lg:flex hidden justify-end" data-aos="zoom-in">
-        <img src={assetsImg.img_profile2} alt="profile image" className="w-[500px] h-[550px] object-cover object-bottom  rounded-full shadow-ku mt-6" />
+        <img src={assetsImg.img_profile2} alt="profile image" className="w-[450px] h-[490px] object-cover object-bottom  rounded-full shadow-ku mt-6" />
       </div>
       <div className="lg:w-[60%] w-[100%] lg:px-20 px-4" data-aos="fade-right">
         <h1 className="text-3xl font-bold text-slate-600 dark:text-slate-200 mb-2 lg:text-left text-center ">About Me</h1>
