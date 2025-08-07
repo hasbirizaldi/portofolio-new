@@ -137,10 +137,10 @@ export const projects = [
   {
     id: 3,
     title: "Wedding Invitation",
-    desc: `<p>This is a digital wedding invitation web application developed using <strong>React.js</strong>. The app is designed to provide a modern, elegant, and responsive invitation experience that can be accessed via mobile or desktop.</p><br /><p><strong>Key Features:</strong></p><ol class='list-decimal list-inside'><li>Countdown timer to the wedding date</li><li>Guest name personalization based on URL parameters</li><li>Formal invitation message display</li><li>Mobile-first design with responsive layout</li><li>One-click access to the invitation page</li><li>Hosted on Netlify for easy sharing</li></ol><br /><p><em>This application is still under improvement and can be customized further to suit different wedding themes and needs.</em></p>`,
+    desc: `<p>This is a digital wedding invitation web application developed using <strong>React.js</strong>. The app is designed to provide a modern, elegant, and responsive invitation experience that can be accessed via mobile or desktop.</p><br /><p><strong>Key Features:</strong></p><ol class='list-decimal list-inside'><li>Countdown timer to the wedding date</li><li>Guest name personalization based on URL parameters</li><li>Formal invitation message display</li><li>Mobile-first design with responsive layout</li><li>One-click access to the invitation page</li><li>Hosted on Vercel for easy sharing</li></ol><br /><p><em>This application is still under improvement and can be customized further to suit different wedding themes and needs.</em></p>`,
     image: assetsImg.img_p3,
-    liveDemo: "https://undangan-ppernikahan.netlify.app/?p=Nini&nama=Plinti",
-    githubLink: "https://github.com/hasbirizaldi",
+    liveDemo: "https://wedding-invit-livid.vercel.app/?to=udin#loveStory",
+    githubLink: "https://github.com/hasbirizaldi/wedding-invit",
   },
   {
     id: 4,
