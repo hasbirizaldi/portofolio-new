@@ -152,18 +152,42 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Web Portal Berita (Pawarta News)",
-    desc: `<p><strong>Pawarta</strong> is a dynamic and fully responsive news portal developed using <strong>WordPress</strong>. This project showcases the capability of WordPress as a content management system (CMS) to build professional news websites with modern layout, categorized content, and editorial tools.</p><br /><p><strong>Key Features:</strong></p><ol class='list-decimal list-inside'><li>Homepage with featured, latest, and trending news</li><li>Categorized sections: National, Politics, Sports, Entertainment, etc.</li><li>Article pages with thumbnail, author info, publish date, and tags</li><li>Admin panel for posting, editing, and managing content</li><li>SEO-optimized structure</li><li>Responsive design for desktop and mobile</li><li>Widget-ready sidebar and footer</li></ol><br /><p>This project is ideal for online publishers, local news sites, or blog networks that need an easy-to-manage yet powerful platform.</p>`,
+    title: "Quize Independence Day of Indonesia",
+    desc: `<p>This project is a <b>History of Indonesian Independence Quiz Application</b> built with React.js. It provides an interactive platform where users can test their knowledge about the history of Indonesia’s independence through multiple-choice questions.</p></br> <p>The quiz includes various questions related to important events, dates, and figures in Indonesian independence history.</p> Each question offers multiple answer options, and users can progress through the quiz step by step. The goal of this project is to create an engaging and educational experience for learners, students, or anyone interested in Indonesian history. It demonstrates the use of React.js for building dynamic user interfaces, handling state management, and creating an interactive quiz system.`,
     image: assetsImg.img_p5,
-    githubLink: "https://github.com/hasbirizaldi",
-    liveDemo: "",
+    githubLink: "https://github.com/hasbirizaldi/Quize-IndependenDay",
+    liveDemo: "https://quize-independen-day.vercel.app/",
   },
   {
     id: 6,
-    title: "Klinik App",
-    desc: `<p>This project is a travel booking web application interface built with <strong>Laravel</strong> as the backend framework and <strong>Blade</strong> as the templating engine. It provides a responsive and modern design for travel-related services such as hotel reservations, flights, trains, buses, and more.</p><br /><p><strong>Key Features:</strong></p><ol class='list-decimal list-inside'><li>Built with <strong>Laravel 10+</strong> for secure and scalable backend</li><li>Uses <strong>Blade templating engine</strong> for dynamic frontend rendering</li><li>Modular structure for booking types (Hotel, Flight, Train, etc.)</li><li>Mobile-first UI layout</li><li>Navigation tabs for Home, Search, Activity, and Settings</li><li>Ready for integration with APIs (e.g., hotel/flight providers)</li></ol><br /><p>This project demonstrates how Laravel and Blade can be used to build a clean, organized, and mobile-friendly booking interface.</p>`,
+    title: "Music Streaming Web Application (Tembang App)",
+    desc: `<p>
+            This project is a <strong>Music Streaming Web Application</strong> built with
+            <strong>React.js</strong>. It provides an interactive interface that allows users to explore music charts,
+            listen to featured tracks, and browse playlists and podcasts.
+          </p>
+
+          <p>
+            The application uses <strong>local API data</strong> as its source for songs, albums, and playlists.
+            It implements <strong>React state management</strong> with <strong>useContext</strong> to handle global
+            states such as the currently playing track, playback controls, and playlist management.
+          </p>
+          </br>
+
+          <h3>Key Features:</h3>
+          <ol class='list-decimal list-inside'>
+            <li><strong>Featured Charts &amp; Playlists</strong>: Showcasing top charts, trending songs, and curated mixes.</li>
+            <li><strong>Now Playing Bar</strong>: Displaying the current track with playback controls.</li>
+            <li><strong>State Management</strong>: Centralized state using React Context API for consistent playback and navigation.</li>
+          </ol>
+          </br>
+
+          <p>
+            This project demonstrates how React.js can be used to build a modern, dynamic, and user-friendly
+            music streaming interface similar to popular platforms.
+          </p>`,
     image: assetsImg.img_p6,
-    githubLink: "https://github.com/hasbirizaldi",
-    liveDemo: "",
+    githubLink: "https://github.com/hasbirizaldi/Tembang-App",
+    liveDemo: "https://tembang-app.vercel.app/",
   },
 ];
