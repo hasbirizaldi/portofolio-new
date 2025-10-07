@@ -16,16 +16,16 @@ body {
 
 .art {
   font-family: "Playfair Display", serif;
+  font-weight: 700;
 }
 .shadow-ku {
-  box-shadow: 3px 3px 5px #00000080;
+  box-shadow: 5px 5px 10px #00000080;
 }
+
 .shadow-b {
   box-shadow: 1px 1px 6px #00000030;
 }
-.shadow-dark {
-  box-shadow: 1px 1px 6px #eeeeee60;
-}
+
 .shadow-btn {
   box-shadow: 2px 2px 2px #00000090;
 }
@@ -43,4 +43,58 @@ body {
 
 .animate-flip {
   animation: flip 1s ease;
+}
+.custom-loader {
+  width: 50px;
+  height: 50px;
+  display: grid;
+}
+.custom-loader::before,
+.custom-loader::after {
+  content: "";
+  grid-area: 1/1;
+  --c: radial-gradient(farthest-side, #766df4 92%, #0000);
+  background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%, var(--c) 0 50%;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  animation: s2 1s infinite;
+}
+.custom-loader::before {
+  margin: 4px;
+  filter: hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear;
+}
+
+@keyframes s2 {
+  100% {
+    transform: rotate(0.5turn);
+  }
+}
+.custom-loader {
+  width: 50px;
+  height: 50px;
+  display: grid;
+}
+.custom-loader::before,
+.custom-loader::after {
+  content: "";
+  grid-area: 1/1;
+  --c: radial-gradient(farthest-side, #4ecdf3 92%, #3258ff00);
+  background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%, var(--c) 0 50%;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  animation: s2 1s infinite;
+}
+.custom-loader::before {
+  margin: 4px;
+  filter: hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear;
+}
+
+@keyframes s2 {
+  100% {
+    transform: rotate(0.5turn);
+  }
 }

@@ -11,8 +11,8 @@ const Home = () => {
         <div className="flex justify-center" data-aos="fade-up">
           <div className=" lg:w-[70%] w-[100%]  flex flex-col justify-center gap-6 ">
             <h1 className="text-[#ac6b34] dark:text-cyan-300 font-semibold text-xl lg:text-left text-center">Hey, I'm Hasbi Rizaldi</h1>
-            <h2 className="lg:text-6xl text-4xl art font-bold text-slate-900 dark:text-white lg:text-left text-center">I Build & Design Web Interfices.</h2>
-            <p className="text-lg text-slate-700 dark:text-gray-300 lg:text-left text-center lg:p-0 p-6">I design and develop websites and apps with a focus on usability, intuitive interfaces, and effortless user experiences.</p>
+            <h2 className="lg:text-6xl text-4xl art font-bold text-slate-900 dark:text-white lg:text-left text-center">I craft & design web interfaces.</h2>
+            <p className="text-lg text-slate-700 dark:text-gray-300 lg:text-left text-center lg:p-0 p-6">I create websites and applications that combine intuitive design, smooth interaction, and meaningful user experiences.</p>
             <div className="bg-[#ac6b34] dark:bg-cyan-700 mx-auto lg:mx-0 w-32 h-12 rounded-lg flex justify-center items-center dark:text-slate-100 text-white mt-9 hover:brightness-125 shadow-btn cursor-pointer">
               <a href="#contact" className="font-semibold">
                 Contact Me
@@ -21,7 +21,7 @@ const Home = () => {
           </div>
         </div>
         <div className="lg:flex hidden justify-center items-center" data-aos="zoom-in">
-          <img src={assetsImg.img_profile} alt="profile image" className="w-[400px] rounded-full shadow-ku" />
+          <img src={assetsImg.img_profile3} alt="profile image" className="w-[400px] rounded-full shadow-ku dark:shadow-dark " />
         </div>
       </div>
       <div className="bg-blue-100 dark:bg-slate-950 h-24 flex gap-16 duration-500">

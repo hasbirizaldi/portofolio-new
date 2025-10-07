@@ -39,7 +39,7 @@ const Main = () => {
       <Footer />
 
       {visible && (
-        <div onClick={scrollToTop} className="fixed right-4 lg:bottom-14 bottom-5 cursor-pointer hover:brightness-125 transition-all duration-500 ease-in-out z-50 bg-white  rounded-full" data-aos="fade-up">
+        <div onClick={scrollToTop} className="fixed right-4 lg:bottom-14 bottom-5 cursor-pointer hover:brightness-125 transition-all duration-500 ease-in-out z-50 bg-white dark:border-cyan-500 rounded-full" data-aos="fade-up">
           <FaArrowCircleUp className="lg:text-[40px] text-[36px] text-[#ac6b34] dark:text-cyan-500" />
         </div>
       )}
