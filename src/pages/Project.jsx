@@ -48,11 +48,10 @@ const Project = () => {
     <>
       <NavbarProject />
       <section id="projects" className="relative min-h-[100vh] bg-[#fdfaf6] dark:bg-slate-900 duration-500 lg:pt-[100px] pt-[115px] pb-10 lg:px-28 px-3 ">
-        <div className=" flex flex-col items-center lg:mb-9">
+        <div className=" flex flex-col items-center lg:mb-9 mb-8">
           <h1 className="text-xl font-bold text-slate-700 dark:text-slate-200" data-aos="fade-up">
             {project.title}
           </h1>
-          <div className="w-[50%] h-0.5 mt-1 dark:bg-slate-50 bg-slate-500" data-aos="fade-up"></div>
         </div>
         <div
           onClick={() => navigate("/")}
@@ -61,7 +60,10 @@ const Project = () => {
           <MdKeyboardDoubleArrowLeft className="text-3xl" /> <p className="font-semibold lg:block hidden">Back</p>
         </div>
         <div>
-          <h5 className="text-slate-900 dark:text-slate-300"> {formatFullDate(project.created_at)}</h5>
+          <h5 className="text-slate-900 dark:text-slate-300" data-aos="fade-down">
+            {" "}
+            {formatFullDate(project.created_at)}
+          </h5>
         </div>
         <div className="grid grid-cols-1 gap-6">
           <div data-aos="fade-right">
