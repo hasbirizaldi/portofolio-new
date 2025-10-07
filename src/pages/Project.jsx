@@ -14,7 +14,7 @@ const Project = () => {
 
   const [toggleShowImg, setToggleShowImg] = useState(false);
 
-  // Fetch projects
+  // Fetch projects mantyap
   const fetchProjects = async () => {
     try {
       const response = await api.get(`/project/${id}`);
