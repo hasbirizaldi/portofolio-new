@@ -47,29 +47,32 @@ const Project = () => {
   return (
     <>
       <NavbarProject />
-      <section id="projects" className="relative min-h-[100vh] bg-[#fdfaf6] dark:bg-slate-900 duration-500 lg:pt-[100px] pt-[115px] pb-10 lg:px-28 px-3 ">
-        <div className=" flex flex-col items-center lg:mb-9 mb-8">
-          <h1 className="text-xl font-bold text-slate-700 dark:text-slate-200" data-aos="fade-up">
-            {project.title}
-          </h1>
-        </div>
+      <section id="projects" className="relative min-h-[100vh] w-[100vw] bg-[#fdfaf6] dark:bg-slate-900 duration-500 lg:pt-[100px] pt-[115px] pb-10 lg:px-28 px-3 ">
         <div
           onClick={() => navigate("/")}
           className="flex items-center justify-center absolute left-2 top-[70px] text-slate-50 dark:text-slate-900 bg-zinc-600 dark:bg-slate-300 cursor-pointer px-3 rounded-l-full hover:brightness-125 shadow-btn"
         >
           <MdKeyboardDoubleArrowLeft className="text-3xl" /> <p className="font-semibold lg:block hidden">Back</p>
         </div>
+        <div className=" flex flex-col items-center lg:mb-9 mb-2">
+          <h1 className="text-xl lg:text-2xl font-bold text-slate-700 dark:text-slate-200" data-aos="fade-up">
+            {project.title}
+          </h1>
+        </div>
         <div>
-          <h5 className="text-slate-900 dark:text-slate-300" data-aos="fade-down">
-            {" "}
-            {formatFullDate(project.created_at)}
+          <h5 className="text-slate-900 dark:text-slate-300 lg:text-base text-sm mb-6" data-aos="fade-down">
+            Uploaded: {formatFullDate(project.created_at)}
           </h5>
         </div>
         <div className="grid grid-cols-1 gap-6">
-          <div data-aos="fade-right">
-            <div className="flex justify-end gap-4 mb-5">
+          <div>
+            <div className="flex justify-end gap-4 mb-2" data-aos="flip-right">
               {project.demo_url ? (
-                <a href={project.demo_url} target="_blank" className="flex gap-1 justify-center items-center bg-[#ac6b34] font-semibold dark:bg-cyan-600 text-white py-1 px-3 rounded shadow-btn hover:brightness-125">
+                <a
+                  href={project.demo_url}
+                  target="_blank"
+                  className="flex gap-1 justify-center items-center bg-[#ac6b34] font-semibold lg:text-base text-sm dark:bg-cyan-600 text-white lg:py-1 py-0.5 lg:px-3 px-3 rounded shadow-btn hover:brightness-125"
+                >
                   <FaDisplay /> Demo
                 </a>
               ) : (
@@ -77,20 +80,25 @@ const Project = () => {
               )}
 
               {project.github_url ? (
-                <a href={project.github_url} target="_blank" className="flex gap-1 justify-center items-center bg-slate-700 font-semibold dark:bg-slate-300 text-white dark:text-slate-950 py-1 px-3 rounded shadow-btn hover:brightness-125">
+                <a
+                  href={project.github_url}
+                  target="_blank"
+                  className="flex gap-1 justify-center items-center bg-slate-700 font-semibold dark:bg-slate-300 text-white dark:text-slate-950 lg:py-1 py-0.5 lg:px-3 px-3 lg:text-base text-sm rounded shadow-btn hover:brightness-125"
+                >
                   <FaGithub /> Github
                 </a>
               ) : (
                 ""
               )}
             </div>
-            <div className=" text-slate-700 dark:text-slate-200" dangerouslySetInnerHTML={{ __html: project.desc }} />
+            <div className=" text-slate-700 dark:text-slate-200" dangerouslySetInnerHTML={{ __html: project.desc }} data-aos="zoom-out" />
           </div>
-          <div className="grid lg:grid-cols-8 grid-cols-5 items-end space-y-6">
+
+          <div className="flex items-end flex-wrap lg:gap-16 gap-3">
             {project.skills?.map((skill, index) => (
-              <div key={index} className="flex flex-col w-[200px] justify-start items-start">
-                <img src={`${import.meta.env.VITE_IMAGE_BASE_URL}/${skill.image}`} alt={skill.name} className="lg:w-16 w-12 " />
-                <span className="text-slate-900 lg:block hidden dark:text-slate-50 mt-1 text-base">{skill.name}</span>
+              <div key={index} className="">
+                <img src={`${import.meta.env.VITE_IMAGE_BASE_URL}/${skill.image}`} alt={skill.name} className="lg:h-16 h-12" />
+                <span className="text-slate-900 lg:block hidden dark:text-slate-50 mt-1 art text-center text-base">{skill.name}</span>
               </div>
             ))}
           </div>
